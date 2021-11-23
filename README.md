@@ -1,4 +1,4 @@
-# Limbo.Umbraco.Boolean
+# Limbo Boolean
 
 This package adds a new boolean property editor to Umbraco 8. Using a toggl input, users will be able to set the value to either `true` or `false`.
 
