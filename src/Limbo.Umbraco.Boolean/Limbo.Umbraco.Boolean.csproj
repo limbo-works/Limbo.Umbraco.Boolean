@@ -17,10 +17,10 @@
     <PackageId>Limbo.Umbraco.Boolean</PackageId>
     <PackageTags>Umbraco, Property Editor, Boolean, Checkbox, Toggle, Limbo, Skybrud</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/limbo/Limbo.Umbraco.Boolean</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Boolean</PackageProjectUrl>
     <PackageIcon>Limbo.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/limbo/Limbo.Umbraco.Boolean</RepositoryUrl>
+    <RepositoryUrl>https://github.com/limbo-works/Limbo.Umbraco.Boolean</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
