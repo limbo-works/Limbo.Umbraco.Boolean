@@ -1,12 +1,12 @@
 ﻿using System;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Core.PropertyEditors;
-using Umbraco.Web.PropertyEditors;
+using Umbraco.Cms.Core.Models.PublishedContent;
+using Umbraco.Cms.Core.PropertyEditors;
+
 
 namespace Limbo.Umbraco.Boolean.Editors.Boolean {
     
     public class BooleanValueConverter : PropertyValueConverterBase {
-        
+
         public override bool IsConverter(IPublishedPropertyType propertyType) {
             return propertyType.EditorAlias == BooleanEditor.EditorAlias;
         }
@@ -23,7 +23,7 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
 
             TrueFalseConfiguration config = propertyType.DataType.ConfigurationAs<TrueFalseConfiguration>();
 
-            return source switch  {
+            return source switch {
                 string s => bool.TryParse(s, out bool result) ? result : config.Default,
                 int i => i == 1,
                 long l => l == 1,
