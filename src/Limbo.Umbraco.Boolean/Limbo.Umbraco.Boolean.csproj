@@ -27,9 +27,9 @@
 
   <ItemGroup>
     <!-- Include NuGet dependencies -->
-    <PackageReference Include="Umbraco.Cms.Core" Version="[10.0.0-rc4,10.999999.0)" />
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[10.0.0-rc4,10.999999.0)" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[10.0.0-rc4,10.999999.0)" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="10.0.0-rc4" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0-rc4" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0-rc4" />
   </ItemGroup>
 
   <ItemGroup>
