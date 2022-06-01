@@ -1,5 +1,6 @@
 ﻿using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
+using Umbraco.Cms.Core.Services;
 
 namespace Limbo.Umbraco.Boolean.Editors.Boolean {
 
@@ -17,6 +18,7 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
     public class BooleanEditor : DataEditor {
 
         private readonly IIOHelper _ioHelper;
+        private readonly IEditorConfigurationParser _editorConfigurationParser;
 
         /// <summary>
         /// Gets the alias of the editor.
@@ -26,12 +28,13 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
         /// <summary>
         /// Initializes a new instance of the <see cref="BooleanEditor"/> class.
         /// </summary>
-        public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
+        public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper, IEditorConfigurationParser editorConfigurationParser) : base(dataValueEditorFactory) {
             _ioHelper = ioHelper;
+            _editorConfigurationParser = editorConfigurationParser;
         }
 
         /// <inheritdoc />
-        protected override IConfigurationEditor CreateConfigurationEditor() => new TrueFalseConfigurationEditor(_ioHelper);
+        protected override IConfigurationEditor CreateConfigurationEditor() => new TrueFalseConfigurationEditor(_ioHelper, _editorConfigurationParser);
 
     }
 
