@@ -27,14 +27,16 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
         /// <inheritdoc />
         public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object source, bool preview) {
 
-            TrueFalseConfiguration config = propertyType.DataType.ConfigurationAs<TrueFalseConfiguration>();
+            TrueFalseConfiguration config = propertyType.DataType.Configuration as TrueFalseConfiguration;
+
+            bool fallback = config?.Default ?? false;
 
             return source switch {
-                string s => bool.TryParse(s, out bool result) ? result : config.Default,
+                string s => bool.TryParse(s, out bool result) ? result : fallback,
                 int i => i == 1,
                 long l => l == 1,
                 bool b => b,
-                _ => config.Default
+                _ => fallback
             };
 
         }
