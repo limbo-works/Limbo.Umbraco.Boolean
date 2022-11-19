@@ -18,7 +18,7 @@
 
   <PropertyGroup>
     <!-- Information for the NuGet package -->
-    <PackageTags>Umbraco, Property Editor, Boolean, Checkbox, Toggle, Limbo, Skybrud</PackageTags>
+    <PackageTags>Umbraco, Property Editor, Boolean, Checkbox, Toggle, Limbo, Skybrud, Umbraco-Marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Boolean</PackageProjectUrl>
     <PackageIcon>Limbo.png</PackageIcon>
