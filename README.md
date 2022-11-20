@@ -1,6 +1,6 @@
 # Limbo Boolean
 
-This package adds a new boolean property editor to Umbraco 8. Using a toggl input, users will be able to set the value to either `true` or `false`.
+This package adds a new boolean property editor to Umbraco 8. Using a toggle input, users will be able to set the value to either `true` or `false`.
 
 ### But why?
 Umbraco already has a built-in property for a boolean type, so why add another one?
@@ -11,16 +11,16 @@ Ideally something like this should be added back to into the Umbraco source code
 
 ## Installation
 
-The Umbraco 9 version of this package is only available via [NuGet](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/2.0.0). To install the package, you can use either .NET CLI:
+The Umbraco 9 version of this package is only available via [NuGet](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/2.0.1). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 2.0.0
+dotnet add package Limbo.Umbraco.Boolean --version 2.0.1
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 2.0.0
+Install-Package Limbo.Umbraco.Boolean -Version 2.0.1
 ```
 
 **Umbraco 8**  
