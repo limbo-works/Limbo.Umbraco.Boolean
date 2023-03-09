@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -6,7 +8,7 @@
 
   <PropertyGroup>
     <VersionPrefix>3.0.1</VersionPrefix>
-    <VersionSuffix Condition="'$(Configuration)'=='Debug'">$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmm`))</VersionSuffix>
+    <VersionSuffix Condition="'$(Configuration)'=='Debug'">build$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmm`))</VersionSuffix>
     <Company>Limbo</Company>
     <Authors>Anders Bjerner</Authors>
     <Copyright>Copyright © 2022</Copyright>
@@ -14,19 +16,20 @@
     <Description>Boolean property editor for Umbraco.</Description>
   </PropertyGroup>
 
+  <!-- Information for the NuGet package -->
   <PropertyGroup>
-    <!-- Information for the NuGet package -->
+    <PackageId>Limbo.Umbraco.Boolean</PackageId>
     <PackageTags>Umbraco, Property Editor, Boolean, Checkbox, Toggle, Limbo, Skybrud, Umbraco-Marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Boolean</PackageProjectUrl>
+    <PackageProjectUrl>https://packages.limbo.works/limbo.umbraco.boolean/v3/</PackageProjectUrl>
     <PackageIcon>Limbo.png</PackageIcon>
     <PackageReadmeFile>NUGET.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/limbo-works/Limbo.Umbraco.Boolean</RepositoryUrl>
   </PropertyGroup>
 
+  <!-- Include NuGet dependencies -->
   <ItemGroup>
-    <!-- Include NuGet dependencies -->
     <PackageReference Include="Umbraco.Cms.Core" Version="[10.0.0,12.0)" />
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="[10.0.0,12.0)" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[10.0.0,12.0)" />
@@ -38,8 +41,8 @@
     <None Include="..\..\NUGET.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <!-- Generate XML documentation -->
   <PropertyGroup>
-    <!-- Generate XML documentation -->
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
