@@ -2,6 +2,8 @@
 
 This package adds a new boolean property editor to Umbraco. Using a toggle input, users will be able to set the value to either `true` or `false`.
 
+<br /><br />
+
 ### But why?
 Umbraco already has a built-in property for a boolean type, so why add another one?
 
@@ -9,18 +11,20 @@ The build-in property editor has a **Initial state** option (alias is `default`)
 
 Ideally something like this should be added back to into the Umbraco source code (there is even [an issue for it](https://github.com/umbraco/Umbraco-CMS/issues/10160)), but for now, this package adds a new property editor that has the expected behavior for the default value / initial state.
 
-## Installation
+<br /><br />
 
-The Umbraco 10 version of this package is only available via [NuGet](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.1). To install the package, you can use either .NET CLI:
+### Installation
+
+The Umbraco 10 version of this package is only available via [NuGet](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.2). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 3.0.1
+dotnet add package Limbo.Umbraco.Boolean --version 3.0.2
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 3.0.1
+Install-Package Limbo.Umbraco.Boolean -Version 3.0.2
 ```
 
 **Umbraco 9**  
