@@ -17,16 +17,16 @@ Ideally something like this should be added back to into the Umbraco source code
 
 ### Installation
 
-The Umbraco 10 version of this package is only available via [NuGet](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.2). To install the package, you can use either .NET CLI:
+The Umbraco 10 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.3). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 3.0.2
+dotnet add package Limbo.Umbraco.Boolean --version 3.0.3
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 3.0.2
+Install-Package Limbo.Umbraco.Boolean -Version 3.0.3
 ```
 
 **Umbraco 9**  
