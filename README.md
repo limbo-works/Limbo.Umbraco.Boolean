@@ -1,6 +1,6 @@
 # Limbo Boolean
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md) [![NuGet](https://img.shields.io/nuget/vpre/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/4.0.0-alpha002) [![NuGet](https://img.shields.io/nuget/dt/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean) [![Our Umbraco](https://img.shields.io/badge/our-umbraco-%233544B1)](https://our.umbraco.com/packages/backoffice-extensions/limbo-boolean/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md) [![NuGet](https://img.shields.io/nuget/vpre/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/4.0.0-alpha002) [![NuGet](https://img.shields.io/nuget/dt/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean) [![Our Umbraco](https://img.shields.io/badge/our-umbraco-%233544B1)](https://our.umbraco.com/packages/backoffice-extensions/limbo-boolean/) [![Umbraco Marketplace](https://img.shields.io/badge/umbraco-marketplace-%233544B1)](https://marketplace.umbraco.com/package/limbo.umbraco.boolean)
 
 This package adds a new boolean property editor to Umbraco. Using a toggle input, users will be able to set the value to either `true` or `false`.
 
@@ -17,16 +17,16 @@ Ideally something like this should be added back to into the Umbraco source code
 
 ### Installation
 
-The Umbraco 10 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.3). To install the package, you can use either .NET CLI:
+The Umbraco 10 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/3.0.4). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 3.0.3
+dotnet add package Limbo.Umbraco.Boolean --version 3.0.4
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 3.0.3
+Install-Package Limbo.Umbraco.Boolean -Version 3.0.4
 ```
 
 **Umbraco 9**  
