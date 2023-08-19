@@ -22,7 +22,7 @@ namespace Limbo.Umbraco.Boolean {
         /// <summary>
         /// Gets the version of the package.
         /// </summary>
-        public static readonly Version Version = typeof(BooleanPackage).Assembly.GetName().Version;
+        public static readonly Version Version = typeof(BooleanPackage).Assembly.GetName().Version!;
 
         /// <summary>
         /// Gets the informational version of the package.

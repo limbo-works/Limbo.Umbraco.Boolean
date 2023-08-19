@@ -25,9 +25,9 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
         }
 
         /// <inheritdoc />
-        public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object source, bool preview) {
+        public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object? source, bool preview) {
 
-            TrueFalseConfiguration config = propertyType.DataType.Configuration as TrueFalseConfiguration;
+            TrueFalseConfiguration? config = propertyType.DataType.Configuration as TrueFalseConfiguration;
 
             bool fallback = config?.Default ?? false;
 
@@ -42,8 +42,8 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean {
         }
 
         /// <inheritdoc />
-        public override object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
-            return (bool) inter ? "1" : "0";
+        public override object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview) {
+            return inter is true ? "1" : "0";
         }
 
     }
