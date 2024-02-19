@@ -10,12 +10,13 @@ namespace Limbo.Umbraco.Boolean.Editors.Boolean;
 [DataEditor(
     EditorAlias,
     EditorType.PropertyValue | EditorType.MacroParameter,
-    "Limbo Boolean",
+    "Limbo Boolean (legacy)",
     "boolean",
     ValueType = ValueTypes.Integer,
     Group = "Limbo",
-    Icon = "icon-checkbox color-limbo")]
-public class BooleanEditor : DataEditor {
+    Icon = "icon-checkbox color-limbo",
+    IsDeprecated = true)]
+public class LegacyBooleanEditor : DataEditor {
 
     private readonly IIOHelper _ioHelper;
     private readonly IEditorConfigurationParser _editorConfigurationParser;
@@ -23,12 +24,12 @@ public class BooleanEditor : DataEditor {
     /// <summary>
     /// Gets the alias of the editor.
     /// </summary>
-    public const string EditorAlias = "Limbo.Umbraco.Boolean";
+    public const string EditorAlias = "Limbo.Boolean";
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BooleanEditor"/> class.
+    /// Initializes a new instance of the <see cref="LegacyBooleanEditor"/> class.
     /// </summary>
-    public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper, IEditorConfigurationParser editorConfigurationParser) : base(dataValueEditorFactory) {
+    public LegacyBooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper, IEditorConfigurationParser editorConfigurationParser) : base(dataValueEditorFactory) {
         _ioHelper = ioHelper;
         _editorConfigurationParser = editorConfigurationParser;
     }

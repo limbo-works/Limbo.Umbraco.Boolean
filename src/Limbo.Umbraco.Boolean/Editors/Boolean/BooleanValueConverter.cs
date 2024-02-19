@@ -11,7 +11,7 @@ public class BooleanValueConverter : PropertyValueConverterBase {
 
     /// <inheritdoc />
     public override bool IsConverter(IPublishedPropertyType propertyType) {
-        return propertyType.EditorAlias == BooleanEditor.EditorAlias;
+        return propertyType.EditorAlias is BooleanEditor.EditorAlias or LegacyBooleanEditor.EditorAlias;
     }
 
     /// <inheritdoc />
@@ -39,11 +39,6 @@ public class BooleanValueConverter : PropertyValueConverterBase {
             _ => fallback
         };
 
-    }
-
-    /// <inheritdoc />
-    public override object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview) {
-        return inter is true ? "1" : "0";
     }
 
 }

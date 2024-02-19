@@ -3,12 +3,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionPrefix>3.0.4</VersionPrefix>
+    <VersionPrefix>13.0.0-alpha001</VersionPrefix>
     <VersionSuffix Condition="'$(Configuration)'=='Debug'">build$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmm`))</VersionSuffix>
     <Company>Limbo</Company>
     <Authors>Anders Bjerner</Authors>
@@ -31,9 +31,9 @@
 
   <!-- Include NuGet dependencies -->
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Core" Version="[10.0.0,12.999)" />
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[10.0.0,12.999)" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[10.0.0,12.999)" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="[13.0.0,13.999)" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[13.0.0,13.999)" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[13.0.0,13.999)" />
   </ItemGroup>
 
   <!-- Include package icon and README for the NuGet package -->
