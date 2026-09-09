@@ -1,4 +1,5 @@
-﻿using Umbraco.Cms.Core.Composing;
+using Skybrud.Essentials.Umbraco.Composing;
+using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 
 #pragma warning disable CS1591
@@ -9,7 +10,7 @@ public class BooleanComposer : IComposer {
 
     public void Compose(IUmbracoBuilder builder) {
 
-        builder.ManifestFilters().Append<BooleanManifestFilter>();
+        builder.AddPackageManifestReader<BooleanPackageManifestReader>();
 
     }
 

@@ -27,7 +27,7 @@ public class BooleanValueConverter : PropertyValueConverterBase {
     /// <inheritdoc />
     public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object? source, bool preview) {
 
-        TrueFalseConfiguration? config = propertyType.DataType.Configuration as TrueFalseConfiguration;
+        BooleanConfiguration? config = ConfigurationEditor.ConfigurationAs<BooleanConfiguration>(propertyType.DataType.ConfigurationObject);
 
         bool fallback = config?.Default ?? false;
 

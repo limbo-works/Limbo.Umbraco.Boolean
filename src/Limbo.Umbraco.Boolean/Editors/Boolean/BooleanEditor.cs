@@ -1,24 +1,15 @@
-﻿using Umbraco.Cms.Core.IO;
+using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
-using Umbraco.Cms.Core.Services;
 
 namespace Limbo.Umbraco.Boolean.Editors.Boolean;
 
 /// <summary>
-/// Represents a checkbox property and parameter editor.
+/// Represents a checkbox property editor.
 /// </summary>
-[DataEditor(
-    EditorAlias,
-    EditorType.PropertyValue | EditorType.MacroParameter,
-    "Limbo Boolean",
-    "boolean",
-    ValueType = ValueTypes.Integer,
-    Group = "Limbo",
-    Icon = "icon-checkbox color-limbo")]
+[DataEditor(EditorAlias, ValueType = ValueTypes.Integer)]
 public class BooleanEditor : DataEditor {
 
     private readonly IIOHelper _ioHelper;
-    private readonly IEditorConfigurationParser _editorConfigurationParser;
 
     /// <summary>
     /// Gets the alias of the editor.
@@ -28,12 +19,11 @@ public class BooleanEditor : DataEditor {
     /// <summary>
     /// Initializes a new instance of the <see cref="BooleanEditor"/> class.
     /// </summary>
-    public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper, IEditorConfigurationParser editorConfigurationParser) : base(dataValueEditorFactory) {
+    public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
         _ioHelper = ioHelper;
-        _editorConfigurationParser = editorConfigurationParser;
     }
 
     /// <inheritdoc />
-    protected override IConfigurationEditor CreateConfigurationEditor() => new TrueFalseConfigurationEditor(_ioHelper, _editorConfigurationParser);
+    protected override IConfigurationEditor CreateConfigurationEditor() => new BooleanConfigurationEditor(_ioHelper);
 
 }
