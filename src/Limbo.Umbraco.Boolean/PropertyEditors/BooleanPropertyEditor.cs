@@ -1,13 +1,13 @@
 using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
 
-namespace Limbo.Umbraco.Boolean.Editors.Boolean;
+namespace Limbo.Umbraco.Boolean.PropertyEditors;
 
 /// <summary>
 /// Represents a checkbox property editor.
 /// </summary>
 [DataEditor(EditorAlias, ValueType = ValueTypes.Integer)]
-public class BooleanEditor : DataEditor {
+public class BooleanPropertyEditor : DataEditor {
 
     private readonly IIOHelper _ioHelper;
 
@@ -17,9 +17,9 @@ public class BooleanEditor : DataEditor {
     public const string EditorAlias = "Limbo.Umbraco.Boolean";
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BooleanEditor"/> class.
+    /// Initializes a new instance of the <see cref="BooleanPropertyEditor"/> class.
     /// </summary>
-    public BooleanEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
+    public BooleanPropertyEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
         _ioHelper = ioHelper;
     }
 

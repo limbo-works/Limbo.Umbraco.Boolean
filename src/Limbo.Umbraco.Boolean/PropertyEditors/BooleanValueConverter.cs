@@ -2,16 +2,16 @@
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.PropertyEditors;
 
-namespace Limbo.Umbraco.Boolean.Editors.Boolean;
+namespace Limbo.Umbraco.Boolean.PropertyEditors;
 
 /// <summary>
-/// Value converter for the <see cref="BooleanEditor"/> property editor.
+/// Value converter for the <see cref="BooleanPropertyEditor"/> property editor.
 /// </summary>
 public class BooleanValueConverter : PropertyValueConverterBase {
 
     /// <inheritdoc />
     public override bool IsConverter(IPublishedPropertyType propertyType) {
-        return propertyType.EditorAlias is BooleanEditor.EditorAlias or LegacyBooleanEditor.EditorAlias;
+        return propertyType.EditorAlias is BooleanPropertyEditor.EditorAlias;
     }
 
     /// <inheritdoc />

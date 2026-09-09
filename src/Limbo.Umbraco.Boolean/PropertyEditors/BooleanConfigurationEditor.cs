@@ -1,7 +1,7 @@
 using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
 
-namespace Limbo.Umbraco.Boolean.Editors.Boolean;
+namespace Limbo.Umbraco.Boolean.PropertyEditors;
 
 /// <summary>
 /// Configuration editor for <see cref="BooleanConfiguration"/>.
