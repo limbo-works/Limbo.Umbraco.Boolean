@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Limbo.Umbraco.Boolean.PropertyEditors;
+using Skybrud.Essentials.Umbraco.Constants;
+using Skybrud.Essentials.Umbraco.Manifests.Extensions.PropertyEditors;
 using Umbraco.Cms.Core.Manifest;
 using Umbraco.Cms.Infrastructure.Manifest;
 
@@ -9,6 +12,10 @@ namespace Limbo.Umbraco.Boolean;
 /// Reads the package manifest for Limbo Boolean.
 /// </summary>
 public class BooleanPackageManifestReader : IPackageManifestReader {
+
+    public const string Alias = BooleanPackage.Alias;
+
+    public const string Name = BooleanPackage.Name;
 
     /// <inheritdoc />
     public async Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync() {
@@ -20,27 +27,70 @@ public class BooleanPackageManifestReader : IPackageManifestReader {
                 AllowTelemetry = true,
                 Version = BooleanPackage.InformationalVersion,
                 Extensions = [
-                    new {
-                        type = "propertyEditorSchema",
-                        alias = "Limbo.Umbraco.Boolean",
-                        name = "Limbo Boolean",
-                        meta = new {
-                            defaultPropertyEditorUiAlias = "Umb.PropertyEditorUi.Toggle",
-                            settings = new {
-                                properties = new[] {
-                                    new {
-                                        alias = "default",
-                                        label = "Initial state",
-                                        description = "The initial state for properties without a saved value.",
-                                        propertyEditorUiAlias = "Umb.PropertyEditorUi.Toggle"
+                    new PropertyEditorSchemaExtension {
+                        Alias = BooleanPropertyEditor.EditorAlias,
+                        Name = $"{Name}: Boolean Property Editor Schema",
+                        Meta = new PropertyEditorSchemaMeta {
+                            DefaultPropertyEditorUiAlias = BooleanPropertyEditor.EditorUiAlias,
+                            Settings = new PropertyEditorSettings {
+                                Properties = [
+                                    new PropertyEditorSettingsProperty() {
+                                        Alias = "default",
+                                        Label = "Initial state",
+                                        Description = "The initial state for properties without a saved value.",
+                                        PropertyEditorUiAlias = UmbracoPropertyEditorUiAliases.Toggle
                                     }
-                                },
-                                defaultData = new[] {
-                                    new {
-                                        alias = "default",
-                                        value = false
+                                ],
+                                DefaultData = [
+                                    new PropertyEditorSettingsDefaultData {
+                                        Alias = "default",
+                                        Value = false
                                     }
-                                }
+                                ]
+                            }
+                        }
+                    },
+                    new PropertyEditorUiExtension {
+                        Alias = BooleanPropertyEditor.EditorUiAlias,
+                        Name = $"{Name}: Boolean Property Editor UI",
+                        Element = "/App_Plugins/Limbo.Umbraco.Boolean/boolean-property-editor-ui.js",
+                        Meta = new PropertyEditorUiMeta {
+                            Label = "Limbo Boolean",
+                            Icon = "icon-checkbox",
+                            Group = "Limbo",
+                            PropertyEditorSchemaAlias = BooleanPropertyEditor.EditorAlias,
+                            SupportsReadOnly = true,
+                            Settings = new PropertyEditorSettings {
+                                Properties = [
+                                    new PropertyEditorSettingsProperty {
+                                        Alias = "showLabels",
+                                        Label = "Show on/off labels",
+                                        PropertyEditorUiAlias = UmbracoPropertyEditorUiAliases.Toggle,
+                                        Config = [
+                                            new PropertyEditorConfigProperty {
+                                                Alias = "ariaLabel",
+                                                Value = "Toggle for whether if label should be displayed"
+                                            }
+                                        ]
+                                    },
+                                    new PropertyEditorSettingsProperty {
+                                        Alias = "labelOn",
+                                        Label = "Label On",
+                                        Description = "Displays text when enabled.",
+                                        PropertyEditorUiAlias = UmbracoPropertyEditorUiAliases.TextBox
+                                    },
+                                    new PropertyEditorSettingsProperty {
+                                        Alias = "labelOff",
+                                        Label = "Label Off",
+                                        Description = "Displays text when disabled.",
+                                        PropertyEditorUiAlias = UmbracoPropertyEditorUiAliases.TextBox
+                                    },
+                                    new PropertyEditorSettingsProperty {
+                                        Alias = "ariaLabel",
+                                        Label = "Screen Reader Label",
+                                        PropertyEditorUiAlias = UmbracoPropertyEditorUiAliases.TextBox
+                                    }
+                                ]
                             }
                         }
                     }
