@@ -3,12 +3,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionPrefix>13.0.0</VersionPrefix>
+    <VersionPrefix>17.0.0</VersionPrefix>
     <VersionSuffix Condition="'$(Configuration)'=='Debug'">build$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmm`))</VersionSuffix>
     <Company>Limbo</Company>
     <Authors>Anders Bjerner</Authors>
@@ -22,7 +22,7 @@
     <PackageId>Limbo.Umbraco.Boolean</PackageId>
     <PackageTags>Umbraco, Property Editor, Boolean, Checkbox, Toggle, Limbo, Skybrud, Umbraco-Marketplace</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://packages.limbo.works/limbo.umbraco.boolean/v3/</PackageProjectUrl>
+    <PackageProjectUrl>https://packages.limbo.works/limbo.umbraco.boolean/v17/</PackageProjectUrl>
     <PackageIcon>Limbo.png</PackageIcon>
     <PackageReadmeFile>NUGET.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
@@ -31,9 +31,10 @@
 
   <!-- Include NuGet dependencies -->
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Core" Version="[13.0.0,13.999)" />
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[13.0.0,13.999)" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[13.0.0,13.999)" />
+    <PackageReference Include="Skybrud.Essentials.Umbraco" Version="17.0.0-alpha003" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="[17.0.0,17.999)" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.0.0,17.999)" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[17.0.0,17.999)" />
   </ItemGroup>
 
   <!-- Include package icon and README for the NuGet package -->
