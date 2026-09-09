@@ -1,6 +1,6 @@
 # Limbo Boolean
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/limbo-works/Limbo.Umbraco.Boolean/blob/v3/main/LICENSE.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/limbo-works/Limbo.Umbraco.Boolean/blob/v17/codex/LICENSE.md)
 [![NuGet](https://img.shields.io/nuget/vpre/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/)
 [![NuGet](https://img.shields.io/nuget/dt/Limbo.Umbraco.Boolean.svg)](https://www.nuget.org/packages/Limbo.Umbraco.Boolean)
 [![Umbraco Marketplace](https://img.shields.io/badge/umbraco-marketplace-%233544B1)](https://marketplace.umbraco.com/package/limbo.umbraco.boolean)
@@ -20,16 +20,16 @@ Ideally something like this should be added back to into the Umbraco source code
 
 ### Installation
 
-The Umbraco 13 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/13.0.0). To install the package, you can use either .NET CLI:
+The Umbraco 17 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean/17.0.0-alpha000). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 13.0.0
+dotnet add package Limbo.Umbraco.Boolean --version 17.0.0-alpha000
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 13.0.0
+Install-Package Limbo.Umbraco.Boolean -Version 17.0.0-alpha000
 ```
 
 **Umbraco 10-12**  

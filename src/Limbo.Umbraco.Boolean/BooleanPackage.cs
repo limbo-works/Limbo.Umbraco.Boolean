@@ -49,11 +49,11 @@ public static class BooleanPackage {
     /// <summary>
     /// Gets the website URL of the package.
     /// </summary>
-    public const string WebsiteUrl = "https://packages.limbo.works/limbo.umbraco.boolean/v3/";
+    public const string WebsiteUrl = "https://packages.limbo.works/limbo.umbraco.boolean/v17/";
 
     /// <summary>
     /// Gets the URL of the documentation for this package.
     /// </summary>
-    public const string DocumentationUrl = "https://packages.limbo.works/limbo.umbraco.boolean/v3/docs/";
+    public const string DocumentationUrl = "https://packages.limbo.works/limbo.umbraco.boolean/v17/docs/";
 
 }
