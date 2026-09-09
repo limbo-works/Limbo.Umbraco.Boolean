@@ -21,10 +21,28 @@ public class BooleanPackageManifestReader : IPackageManifestReader {
                 Version = BooleanPackage.InformationalVersion,
                 Extensions = [
                     new {
-                        type = "bundle",
-                        alias = "Limbo.Umbraco.Boolean.Bundle",
+                        type = "propertyEditorSchema",
+                        alias = "Limbo.Umbraco.Boolean",
                         name = "Limbo Boolean",
-                        js = "/App_Plugins/Limbo.Umbraco.Boolean/manifest.js"
+                        meta = new {
+                            defaultPropertyEditorUiAlias = "Umb.PropertyEditorUi.Toggle",
+                            settings = new {
+                                properties = new[] {
+                                    new {
+                                        alias = "default",
+                                        label = "Initial state",
+                                        description = "The initial state for properties without a saved value.",
+                                        propertyEditorUiAlias = "Umb.PropertyEditorUi.Toggle"
+                                    }
+                                },
+                                defaultData = new[] {
+                                    new {
+                                        alias = "default",
+                                        value = false
+                                    }
+                                }
+                            }
+                        }
                     }
                 ]
             }
