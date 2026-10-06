@@ -57,13 +57,13 @@ Ideally something like this should be added back to into the Umbraco source code
 The Umbraco 17 version of this package is only available via [**NuGet**](https://www.nuget.org/packages/Limbo.Umbraco.Boolean). To install the package, you can use either .NET CLI:
 
 ```
-dotnet add package Limbo.Umbraco.Boolean --version 17.0.0-alpha001
+dotnet add package Limbo.Umbraco.Boolean --version 17.0.0-alpha002
 ```
 
 or the older NuGet Package Manager:
 
 ```
-Install-Package Limbo.Umbraco.Boolean -Version 17.0.0-alpha001
+Install-Package Limbo.Umbraco.Boolean -Version 17.0.0-alpha002
 ```
 
 ### Other versions of Umbraco
