@@ -6,7 +6,7 @@ import { UmbFormControlMixin, UMB_VALIDATION_FALSE_LOCALIZATION_KEY } from "@umb
 export default class LimboBooleanPropertyEditorUiElement extends UmbFormControlMixin(UmbLitElement) {
 
 	static properties = {
-		value: { type: Boolean },
+		value: {},
 		readonly: { type: Boolean }
 	};
 
@@ -39,7 +39,11 @@ export default class LimboBooleanPropertyEditorUiElement extends UmbFormControlM
 
 	connectedCallback() {
 		super.connectedCallback();
-		if (this.value === undefined) {
+		if (this.value === "0") {
+			this.value = false;
+		} else if (this.value === "1") {
+			this.value = true;
+		} else if (this.value === undefined) {
 			this.value = this._default;
 		}
 	}
