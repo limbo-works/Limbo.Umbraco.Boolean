@@ -55,9 +55,9 @@ public class BooleanPackageManifestReader : IPackageManifestReader {
                         Name = $"{Name}: Boolean Property Editor UI",
                         Element = "/App_Plugins/Limbo.Umbraco.Boolean/boolean-property-editor-ui.js",
                         Meta = new PropertyEditorUiMeta {
-                            Label = "Limbo Boolean",
-                            Icon = "icon-checkbox",
-                            Group = "Limbo",
+                            Label = BooleanPropertyEditor.EditorName,
+                            Icon = BooleanPropertyEditor.EditorIcon,
+                            Group = BooleanPropertyEditor.EditorGroup,
                             PropertyEditorSchemaAlias = BooleanPropertyEditor.EditorAlias,
                             SupportsReadOnly = true,
                             Settings = new PropertyEditorSettings {
