@@ -43,7 +43,7 @@ export default class LimboBooleanPropertyEditorUiElement extends UmbFormControlM
 			this.value = false;
 		} else if (this.value === "1") {
 			this.value = true;
-		} else if (this.value === undefined) {
+		} else if (this.value === undefined || this.value === null || this.value === "") {
 			this.value = this._default;
 		}
 	}
